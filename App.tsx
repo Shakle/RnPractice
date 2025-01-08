@@ -1,23 +1,14 @@
 import React from "react";
-import { SafeAreaProvider } from "react-native-safe-area-context";
-import { StyleSheet } from "react-native";
 import { PaperProvider } from "react-native-paper";
-import HomeScreen from "./src/view/screens/home_screen/home_screen";
+import NavigationScreen from "./src/view/screens/navigation_screen/navigation_screen.tsx";
+import mainTheme from "./src/app/theme/theme.ts";
 
 function App(): React.JSX.Element {
   return (
-    <PaperProvider>
-      <SafeAreaProvider style={styles.container}>
-        <HomeScreen />
-      </SafeAreaProvider>
+    <PaperProvider theme={mainTheme}>
+        <NavigationScreen />
     </PaperProvider>
   );
 }
 
 export default App;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});

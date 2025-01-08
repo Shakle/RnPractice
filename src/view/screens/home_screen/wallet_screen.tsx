@@ -1,13 +1,14 @@
-import { View } from 'react-native';
+import {SafeAreaView, View} from 'react-native';
 import HomeAppBar from './components/home_app_bar';
 import BalanceCard from './components/balance_card';
 import { VerticalSpacer } from '../../components/spacers';
 import CryptoSelector from './components/crypto/crypto_selector';
 import OrderHistoryArea from './components/order_history_area';
+import React from "react";
 
-const HomeScreen = () => {
+const WalletScreen = () => {
     return (
-        <View style={{flexDirection: 'column', marginTop: 20, flex: 1}}>
+        <SafeAreaView style={{flexDirection: 'column', flex: 1}}>
             <TopArea></TopArea>
             <VerticalSpacer height={5} />
             <CryptoSelector />
@@ -15,7 +16,7 @@ const HomeScreen = () => {
             <View style={{paddingHorizontal: 20, flex: 1}}> 
                 <OrderHistoryArea />
             </View>
-        </View>
+        </SafeAreaView>
     );
 };
 
@@ -29,4 +30,4 @@ const TopArea = () => {
     );
 };
 
-export default HomeScreen;
+export default WalletScreen;
