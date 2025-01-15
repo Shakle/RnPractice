@@ -40,6 +40,7 @@ const AppBottomSheet = () => {
                     <KeyboardAwareScrollView style={{ flex: 1}}
                         showsVerticalScrollIndicator={false}
                         extraScrollHeight={80}
+                        keyboardOpeningTime={Number.MAX_SAFE_INTEGER}
                         contentContainerStyle={{ flexGrow: 1}
                     }>
                         {content}

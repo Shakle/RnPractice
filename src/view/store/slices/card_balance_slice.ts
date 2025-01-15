@@ -1,20 +1,20 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface CryptoBalanceState {
+interface CardBalanceState {
     value: number;
     error: string | null;
 }
 
-const initialState: CryptoBalanceState = {
-    value: 0,
+const initialState: CardBalanceState = {
+    value: 1000,
     error: null,
 };
 
-const cryptoBalanceSlice = createSlice({
-    name: "crypto_balance",
+const cardBalanceSlice = createSlice({
+    name: "card_balance",
     initialState,
     reducers: {
-        changeCryptoBalance: (state, action: PayloadAction<number>) => {
+        changeCardBalance: (state, action: PayloadAction<number>) => {
             if (state.value + action.payload < 0) {
                 state.error = "Insufficient balance: Cannot go below 0"; // Set the error message
             } else {
@@ -25,5 +25,5 @@ const cryptoBalanceSlice = createSlice({
     },
 });
 
-export const { changeCryptoBalance } = cryptoBalanceSlice.actions;
-export default cryptoBalanceSlice;
+export const { changeCardBalance } = cardBalanceSlice.actions;
+export default cardBalanceSlice;

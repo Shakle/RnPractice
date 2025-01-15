@@ -10,7 +10,7 @@ const CardScreen = () => {
           <CreditCardAnimated />
           <View style={{paddingHorizontal: 20, flex: 1}}>
               <View style={{alignItems:"center"}}>
-                  <CardBalance amount={1000}/>
+                  <CardBalance/>
               </View>
               <ButtonRow />
               <TransactionsHistory title={"Transactions history"} onPress={() => {}}/>
