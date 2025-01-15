@@ -13,7 +13,7 @@ const CardScreen = () => {
                   <CardBalance/>
               </View>
               <ButtonRow />
-              <TransactionsHistory title={"Transactions history"} onPress={() => {}}/>
+              <TransactionsHistory title={"Transactions history"} isCardHistory={true} onPress={() => {}}/>
           </View>
       </SafeAreaView>
     );

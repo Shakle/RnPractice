@@ -12,7 +12,7 @@ const TransactionTile = ({ name, icon, price }: TransactionTileProps) => {
         <View style={styles.transactionsTile}>
             <Image source={{ uri: icon }} style={{ width: 20, height: 20, marginRight: 10 }} />
             <Text style={{fontWeight: 'bold', flex: 1 }}>{name}</Text>
-            <Text style={{color: '#888' }}>${price}</Text>
+            <Text style={{ color: '#888' }}>{`${price} $`}</Text>
         </View>
     );
 }

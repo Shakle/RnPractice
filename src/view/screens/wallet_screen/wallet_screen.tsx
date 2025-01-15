@@ -15,7 +15,7 @@ const WalletScreen = () => {
             <CryptoSelector/>
             <VerticalSpacer height={5} />
             <View style={{paddingHorizontal: 20, flex: 1}}>
-                <TransactionsHistory title={"Order history"} onPress={() => {}}/>
+                <TransactionsHistory title={"Order history"} isCardHistory={false} onPress={() => {}}/>
             </View>
         </SafeAreaView>
     );

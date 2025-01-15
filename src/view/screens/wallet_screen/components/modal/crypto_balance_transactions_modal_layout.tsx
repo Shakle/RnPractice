@@ -8,6 +8,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {changeCardBalance} from "../../../../store/slices/card_balance_slice.ts";
 import {changeCryptoBalance} from "../../../../store/slices/crypto_balance_slice.ts";
 import {RootState} from "../../../../store/store.ts";
+import {addCardTransactionRecord} from "../../../../store/slices/card_transaction_history.ts";
+import {addCryptoTransactionRecord} from "../../../../store/slices/crypto_transaction_slice.ts";
 
 const CryptoBalanceTransactionsModalLayout = () => {
     const [text, setText] = React.useState('');
@@ -52,7 +54,10 @@ const ConfirmButton = (props: ConfirmButtonProps) => {
 
         if (amountNumber > 0 && amountNumber <= cardBalance) {
             dispatch(changeCardBalance(-amountNumber));
+            dispatch(addCardTransactionRecord(-amountNumber))
+
             dispatch(changeCryptoBalance(amountNumber));
+            dispatch(addCryptoTransactionRecord(amountNumber));
         } else {
             Alert.alert('Error', 'Invalid transaction amount');
         }

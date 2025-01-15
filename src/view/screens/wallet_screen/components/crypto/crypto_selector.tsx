@@ -1,6 +1,8 @@
 import { ScrollView, View } from "react-native";
 import CryptoTile from "./crypto_tile";
 import { HorizontalSpacer } from "../../../../components/spacers";
+import DashAnimated from "../../../../components/animations/dash_animated.tsx";
+import React from "react";
 
 const CryptoSelector = () => {
     return (
