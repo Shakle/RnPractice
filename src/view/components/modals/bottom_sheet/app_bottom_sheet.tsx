@@ -7,6 +7,7 @@ import {
 } from "@gorhom/bottom-sheet";
 import BottomSheetModalManager from "./bottom_sheet_manager";
 import {KeyboardAwareScrollView} from "react-native-keyboard-aware-scroll-view";
+import {Platform} from "react-native";
 
 const AppBottomSheet = () => {
     const modalRef = useRef<BottomSheetModal>(null);
@@ -37,12 +38,14 @@ const AppBottomSheet = () => {
                 backdropComponent={renderBackdrop}
             >
                 <BottomSheetView style={{ flex: 1 }}>
-                    <KeyboardAwareScrollView style={{ flex: 1}}
+                    <KeyboardAwareScrollView
+                        style={{flex: 1}}
                         showsVerticalScrollIndicator={false}
-                        extraScrollHeight={80}
-                        keyboardOpeningTime={Number.MAX_SAFE_INTEGER}
-                        contentContainerStyle={{ flexGrow: 1}
-                    }>
+                        extraScrollHeight={Platform.OS === "android" ? 170 : 80}
+                        keyboardOpeningTime={Platform.OS === "ios" ? Number.MAX_SAFE_INTEGER : 0}
+                        enableOnAndroid // Ensures it works on Android
+                        contentContainerStyle={{flexGrow: 1}}
+                    >
                         {content}
                     </KeyboardAwareScrollView>
                 </BottomSheetView>
