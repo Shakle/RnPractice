@@ -2,7 +2,7 @@ import React, { RefObject } from "react";
 import { BottomSheetModal } from "@gorhom/bottom-sheet";
 
 class BottomSheetModalManager {
-    private modalRef: RefObject<BottomSheetModal> | null = null;
+    public modalRef: RefObject<BottomSheetModal> | null = null;
     private content: React.ReactNode = null;
     private onContentChange: ((content: React.ReactNode) => void) | null = null;
 

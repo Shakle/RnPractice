@@ -45,6 +45,7 @@ const AppBottomSheet = () => {
                         keyboardOpeningTime={Platform.OS === "ios" ? Number.MAX_SAFE_INTEGER : 0}
                         enableOnAndroid // Ensures it works on Android
                         contentContainerStyle={{flexGrow: 1}}
+                        keyboardShouldPersistTaps={"handled"}
                     >
                         {content}
                     </KeyboardAwareScrollView>

@@ -1,4 +1,4 @@
-import {Alert, StyleSheet, Text, View} from "react-native";
+import {Alert, Keyboard, StyleSheet, Text, View} from "react-native";
 import {Button, TextInput} from "react-native-paper";
 import React from "react";
 import {VerticalSpacer} from "../../../../components/spacers.tsx";
@@ -10,6 +10,7 @@ import {changeCryptoBalance} from "../../../../store/slices/crypto_balance_slice
 import {RootState} from "../../../../store/store.ts";
 import {addCardTransactionRecord} from "../../../../store/slices/card_transaction_history.ts";
 import {addCryptoTransactionRecord} from "../../../../store/slices/crypto_transaction_slice.ts";
+import BottomSheetModalManager from "../../../../components/modals/bottom_sheet/bottom_sheet_manager.ts";
 
 const CryptoBalanceTransactionsModalLayout = () => {
     const [text, setText] = React.useState('');
@@ -58,6 +59,9 @@ const ConfirmButton = (props: ConfirmButtonProps) => {
 
             dispatch(changeCryptoBalance(amountNumber));
             dispatch(addCryptoTransactionRecord(amountNumber));
+
+            Keyboard.dismiss();
+            BottomSheetModalManager.modalRef?.current?.close();
         } else {
             Alert.alert('Error', 'Invalid transaction amount');
         }
