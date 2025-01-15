@@ -14,6 +14,7 @@
 		5C7DB95067BD9BA55CEEA647 /* libPods-RnPractice-RnPracticeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 807B96A0A78CBD33E9C7A1E5 /* libPods-RnPractice-RnPracticeTests.a */; };
 		6555CC902E80EC95118F178F /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		BDE5657A2D350FFA00E57E21 /* credit_card.riv in Resources */ = {isa = PBXBuildFile; fileRef = BDE565792D350FFA00E57E21 /* credit_card.riv */; };
 		E52030A29251C0D8267F3F23 /* libPods-RnPractice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4932B8996E002CEACACA07A8 /* libPods-RnPractice.a */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		807B96A0A78CBD33E9C7A1E5 /* libPods-RnPractice-RnPracticeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RnPractice-RnPracticeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RnPractice/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A788CCB89A9337872C18D167 /* Pods-RnPractice-RnPracticeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RnPractice-RnPracticeTests.debug.xcconfig"; path = "Target Support Files/Pods-RnPractice-RnPracticeTests/Pods-RnPractice-RnPracticeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BDE565792D350FFA00E57E21 /* credit_card.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = credit_card.riv; sourceTree = "<group>"; };
 		C281F506145348D623A77323 /* Pods-RnPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RnPractice.debug.xcconfig"; path = "Target Support Files/Pods-RnPractice/Pods-RnPractice.debug.xcconfig"; sourceTree = "<group>"; };
 		D178CA89797DE41DF0D38226 /* Pods-RnPractice-RnPracticeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RnPractice-RnPracticeTests.release.xcconfig"; path = "Target Support Files/Pods-RnPractice-RnPracticeTests/Pods-RnPractice-RnPracticeTests.release.xcconfig"; sourceTree = "<group>"; };
 		D5B0FF32F672C99FE94CB050 /* Pods-RnPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RnPractice.release.xcconfig"; path = "Target Support Files/Pods-RnPractice/Pods-RnPractice.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				BDEC7DBB2D3482480061BF77 /* Assets */,
 				13B07FAE1A68108700A75B9A /* RnPractice */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* RnPracticeTests */,
@@ -149,6 +152,14 @@
 				D178CA89797DE41DF0D38226 /* Pods-RnPractice-RnPracticeTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		BDEC7DBB2D3482480061BF77 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BDE565792D350FFA00E57E21 /* credit_card.riv */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +257,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				BDE5657A2D350FFA00E57E21 /* credit_card.riv in Resources */,
 				6555CC902E80EC95118F178F /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

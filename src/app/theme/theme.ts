@@ -5,6 +5,7 @@ const mainTheme = {
     ...DefaultTheme,
     colors: {
         ...DefaultTheme.colors,
+        primary: AppColors.orange,
         secondaryContainer: AppColors.orange,
         background: '#FAFAFA',
     },
