@@ -17,7 +17,7 @@ const CryptoBalanceTransactionsModalLayout = () => {
 
     return (
         <View style={styles.mainContainer}>
-            <View style={{height: 150, marginBottom: 25}}>
+            <View style={{height: 170, marginBottom: 25}}>
                 <CreditCardAnimated />
             </View>
             <CardBalance fontSize={15}/>
